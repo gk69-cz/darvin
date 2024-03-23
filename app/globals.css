@@ -7,23 +7,11 @@ body {
   height: 100vh;
 }
 
-*,
-*::before,
-*::after {
-  border:none;
-  box-sizing: border-box;
-}
-
-/* 
-R (0)
-G (110)
-B (255 */
-
+ 
 @layer base {
   :root {
     --background: 216 100% 98.04%;
     --foreground: 213.6 100% 4.9%;
-
     --primary: 214.12 100% 50%;
     --primary-foreground: 0 0% 100%;
 
@@ -51,56 +39,52 @@ B (255 */
 
     --radius: 0.5rem;
   }
-
+ 
   .dark {
-    /* Name: custom color palette
-       Author: Ilias Ism
-       URL: https://gradient.page */
+    --gradient: #00FF7F;
 
-    /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: linear-gradient(to top left, #007adf, #00ecbc);
+    --background: 159 65% 4%;
+    --foreground: 159 10% 97.5%;
 
-    --background: 220 65% 3.52%;
-    --foreground: 220 10% 97.2%;
+    --muted: 159 50% 15%;
+    --muted-foreground: 159 10% 55%;
 
-    --muted: 220 50% 13.2%;
-    --muted-foreground: 220 10% 54.4%;
+    --popover: 159 45% 6.5%;
+    --popover-foreground: 159 10% 97.5%;
 
-    --popover: 220 45% 5.72%;
-    --popover-foreground: 220 10% 97.2%;
+    --card: 159 45% 6.5%;
+    --card-foreground: 159 10% 97.5%;
 
-    --card: 220 45% 5.72%;
-    --card-foreground: 220 10% 97.2%;
+    --border: 159 50% 15%;
+    --input: 159 50% 15%;
 
-    --border: 220 50% 13.2%;
-    --input: 220 50% 13.2%;
+    --primary: 159 100% 50%;
+    --primary-foreground: 159 10% 5%;
 
-    --primary: 220 100% 44%;
-    --primary-foreground: 220 10% 97.2%;
+    --secondary: 159 50% 15%;
+    --secondary-foreground: 159 10% 97.5%;
 
-    --secondary: 220 50% 13.2%;
-    --secondary-foreground: 220 10% 97.2%;
-
-    --accent: 220 50% 13.2%;
-    --accent-foreground: 220 10% 97.2%;
+    --accent: 159 50% 15%;
+    --accent-foreground: 159 10% 97.5%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 220 10% 97.2%;
+    --destructive-foreground: 159 10% 97.5%;
 
-    --ring: 220 100% 44%;
+    --ring: 159 100% 50%;
+   
   }
 }
-
+ 
 @layer base {
   * {
-    @apply border;
+    @apply border-border;
   }
   body {
-    /* @apply bg-background text-foreground; */
+    @apply bg-background text-foreground;
   }
 }
 
-.dotPattern {
+dotPattern {
   background-image: radial-gradient(rgb(35, 40, 68) 1px, transparent 1px);
   background-size: 25px 25px;
 }
